@@ -1,3 +1,5 @@
+#!/usr/bin/env lua
+
 --           _   _   _                   _             
 --  ___  ___| |_| |_(_)_ __   __ _ ___  | |_   _  __ _ 
 -- / __|/ _ \ __| __| | '_ \ / _` / __| | | | | |/ _` |
@@ -28,6 +30,9 @@ set.splitright = true
 set.splitbelow = true
 set.laststatus = 3
 set.winbar = '%f%=%b/0x%B'
+
+vim.g.loaded_perl_provider = 0
+vim.g.python3_host_prog = '/usr/bin/python'
 
 --vim.cmd[[ colorscheme dracula ]]
 vim.cmd[[ highlight Comment guifg=#bbbbbb ]]
