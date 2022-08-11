@@ -1,5 +1,3 @@
-#!/usr/bin/env lua
-
 --           _   _   _                   _             
 --  ___  ___| |_| |_(_)_ __   __ _ ___  | |_   _  __ _ 
 -- / __|/ _ \ __| __| | '_ \ / _` / __| | | | | |/ _` |
@@ -20,6 +18,7 @@ set.shiftwidth = 4
 set.expandtab = true
 set.autoindent = true
 set.smartindent = true
+-- Setting 'clipboard' to 'unnamedplus' disables register "0 - Bug with which-key - See issue 202 on github.
 set.clipboard = 'unnamedplus'
 set.pastetoggle = '<F6>'
 set.timeoutlen = 1500
@@ -30,6 +29,9 @@ set.splitright = true
 set.splitbelow = true
 set.laststatus = 3
 set.winbar = '%f%=%b/0x%B'
+set.listchars = 'eol:⮰,space:.,trail:+,tab:➱ '
+set.ignorecase = true
+set.smartcase = true
 
 vim.g.loaded_perl_provider = 0
 vim.g.python3_host_prog = '/usr/bin/python'
@@ -37,5 +39,6 @@ vim.g.python3_host_prog = '/usr/bin/python'
 --vim.cmd[[ colorscheme dracula ]]
 vim.cmd[[ highlight Comment guifg=#bbbbbb ]]
 vim.cmd[[ highlight LineNr guifg=#bbbbbb ]]
+vim.cmd[[ highlight NonText guifg=yellow ]]
 vim.cmd[[ highlight WinSeparator guibg=None ]]
 vim.cmd[[ highlight PMenu guibg=#202020 ]]

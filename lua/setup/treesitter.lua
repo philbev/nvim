@@ -44,8 +44,8 @@ require'nvim-treesitter.configs'.setup {
         '#ff00ff',
         '#ffff00',
         '#ffffff',
-        '#ff0000',
-        '#0000ff',
+        --'#ff0000',
+        --'#0000ff',
     }, -- table of hex strings
     -- termcolors = {} -- table of colour name strings
   },

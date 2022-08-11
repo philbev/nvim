@@ -10,6 +10,8 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+map('n', '', '<cmd>NeoTreeShowToggle<cr>', opts) -- Maps to Control-/
+map('n', '<M-/>', '<cmd>NeoTreeFloatToggle<cr>', opts) -- Maps to Control-/
 map('n', '<F2>', '<cmd>nohlsearch<cr>', opts)
 map('n', '<F3>', '<cmd>set spell! spell?<cr>', opts)
 map('n', '<F4>', '<cmd>set relativenumber! relativenumber?<cr>', opts)
@@ -19,6 +21,7 @@ map('n', '<M-Del>', '<cmd>bdelete<cr>', opts)
 map('n', '<M-Down>', '<cmd>m +1<cr>==', opts)
 map('n', '<M-Up>', '<cmd>m -2<cr>==', opts)
 map('n', '<M-c>', '<cmd>close<cr>', opts)
+map('n', '<M-l>', '<cmd>set list! list?<cr>', opts)
 map('n', '<M-n>', '<C-w>w', opts)
 map('n', '<M-o>', '<cmd>only<cr>', opts)
 map('n', '<leader>n', '<cmd>NeoTreeShowToggle<cr>', opts)

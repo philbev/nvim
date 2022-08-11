@@ -1,4 +1,3 @@
---                   _             _             
 --  _ __   __ _  ___| | _____ _ __| |_   _  __ _ 
 -- | '_ \ / _` |/ __| |/ / _ \ '__| | | | |/ _` |
 -- | |_) | (_| | (__|   <  __/ | _| | |_| | (_| |
@@ -49,11 +48,10 @@ return packer.startup(function()
     use { 'nvim-neo-tree/neo-tree.nvim', branch = 'v2.x' }
     use 'MunifTanjim/nui.nvim'
     use 'folke/which-key.nvim'
-    use 'kylechui/nvim-surround'
     use 'akinsho/toggleterm.nvim'
+    use 'tpope/vim-surround'
 end)
 
 
 -- use 'lewis6991/gitsigns.nvim'
 -- use 'kyazdani42/nvim-tree.lua'
--- use 'tpope/vim-surround'

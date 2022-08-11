@@ -19,7 +19,7 @@ surround.setup({
         delete = "ds",
         change = "cs",
     },
-    delimiters = {
+    surrounds = {
         pairs = {
             ["("] = { "( ", " )" },
             [")"] = { "(", ")" },
@@ -67,7 +67,7 @@ surround.setup({
             ["s"] = { ")", "]", "}", ">", "'", '"', "`" }, -- Any surrounding delimiter
         },
     },
-    highlight_motion = { -- Highlight text-objects before surrounding them
+    highlight = { -- Highlight text-objects before surrounding them
         duration = 0,
     }
 })

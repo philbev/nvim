@@ -56,20 +56,26 @@ cmd({ 'FileType' }, {
 -- 'Insert' key moves cursor to next hyperlink.
 cmd({ 'FileType' }, {
     pattern = { 'help' },
-    command = "lua vim.keymap.set('n', '<Insert>', '/|[^|]*|<cr>', { noremap = true, silent = true, buffer = 0 })"
+    command = "lua vim.keymap.set('n', '<Insert>', '/|[^|]*|<cr>:nohlsearch<cr>', { noremap = true, silent = true, buffer = 0 })"
+})
+
+-- 'Del' key moves cursor to previous hyperlink.
+cmd({ 'FileType' }, {
+    pattern = { 'help' },
+    command = "lua vim.keymap.set('n', '<Del>', '?|[^|]*|<cr>:nohlsearch<cr>', { noremap = true, silent = true, buffer = 0 })"
 })
 
 cmd({'FileType'}, {
     pattern = {'lua'},
-    command = "lua vim.keymap.set('n', '<F5>', '<cmd>w | !lua %<cr>', { noremap = true, silent = true, buffer = 0 })"
+    command = "lua vim.keymap.set('n', '<F5>', '<cmd>w | terminal lua %<cr>a', { noremap = true, silent = true, buffer = 0 })"
 })
 
-cmd({'FileType'}, {
-    pattern = {'lua'},
-    command = "0r ~/.config/nvim/template/skeleton.lua"
-})
+--cmd({'BufNewFile'}, {
+--    pattern = {'*.lua'},
+--    command = "0r ~/.config/nvim/template/skeleton.lua"
+--})
 
 cmd({'FileType'}, {
     pattern = {'python'},
-    command = "lua vim.keymap.set('n', '<F5>', '<cmd>w | !python %<cr>', { noremap = true, silent = true, buffer = 0 })"
+    command = "lua vim.keymap.set('n', '<F5>', '<cmd>w | terminal python %<cr>a', { noremap = true, silent = true, buffer = 0 })"
 })

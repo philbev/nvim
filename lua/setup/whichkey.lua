@@ -79,6 +79,9 @@ wk.setup{
 }
 
 wk.register({
+  c = { '<cmd>checkhealth<cr>', 'Run Checkhealth' },
+  q = { '<cmd>qa<cr>', '[:qa] Quit All' },
+  s = { '<cmd>w | so %<cr>', '[:w | so %] Write & Source All' },
   t = {
     name = "Telescope", -- optional group name
     f = { "<cmd>Telescope find_files<cr>", "Find File" },
@@ -88,8 +91,6 @@ wk.register({
     --r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false, buffer = 123 }, -- additional options for creating the keymap
     o = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false },
   },
-  q = { '<cmd>qa<cr>', '[:qa] Quit All' },
-  s = { '<cmd>w | so %<cr>', '[:w | so %] Write & Source All' },
   v = {
       name = 'Split',
       h = {  '<cmd>split<cr>', 'Split Horizontal' },

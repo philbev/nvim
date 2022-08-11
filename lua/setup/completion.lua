@@ -1,4 +1,3 @@
---                            _      _   _               _             
 --   ___ ___  _ __ ___  _ __ | | ___| |_(_) ___  _ __   | |_   _  __ _ 
 --  / __/ _ \| '_ ` _ \| '_ \| |/ _ \ __| |/ _ \| '_ \  | | | | |/ _` |
 -- | (_| (_) | | | | | | |_) | |  __/ |_| | (_) | | | |_| | |_| | (_| |
@@ -146,7 +145,7 @@ require("cmp_dictionary").setup({
 		first_case_insensitive = false,
 		document = false,
 		document_command = "wn %s -over",
-		async = false, 
+		async = false,
 		capacity = 5,
 		debug = false,
 	})
