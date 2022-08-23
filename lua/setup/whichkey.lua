@@ -82,7 +82,7 @@ wk.register({
   c = { '<cmd>checkhealth<cr>', 'Run Checkhealth' },
   q = { '<cmd>qa<cr>', '[:qa] Quit All' },
   s = { '<cmd>w | so %<cr>', '[:w | so %] Write & Source All' },
-  t = {
+  f = {
     name = "Telescope", -- optional group name
     f = { "<cmd>Telescope find_files<cr>", "Find File" },
     g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
