@@ -91,6 +91,7 @@ cmp.setup.filetype('gitcommit', {
 	}, {
 		{ name = 'buffer' },
 		{ name = 'dictionary' },
+		{ name = 'path' },
 	})
 })
 
