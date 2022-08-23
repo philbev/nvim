@@ -33,12 +33,18 @@ set.listchars = 'eol:⮰,space:.,trail:+,tab:➱ '
 set.ignorecase = true
 set.smartcase = true
 
-vim.g.loaded_perl_provider = 0
-vim.g.python3_host_prog = '/usr/bin/python'
-
---vim.cmd[[ colorscheme dracula ]]
-vim.cmd[[ highlight Comment guifg=#bbbbbb ]]
+-------------------- COLOR SCHEMES AND HIGHLIGHTS --------------------
+vim.cmd[[ colorscheme dracula ]]
+vim.cmd[[ highlight Comment guifg=#00bbbb ]]
 vim.cmd[[ highlight LineNr guifg=#bbbbbb ]]
 vim.cmd[[ highlight NonText guifg=yellow ]]
 vim.cmd[[ highlight WinSeparator guibg=None ]]
 vim.cmd[[ highlight PMenu guibg=#202020 ]]
+vim.cmd[[ highlight Normal guibg=None ]]
+
+-------------------- GLOBAL VARIABLES --------------------
+vim.g.loaded_perl_provider = 0
+vim.g.python3_host_prog = '/usr/bin/python'
+
+-------------------- ABBREVIATIONS --------------------
+vim.cmd[[ abbreviate jbm JetBrainsMono Nerd Font]]
