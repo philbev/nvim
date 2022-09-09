@@ -34,7 +34,7 @@ set.ignorecase = true
 set.smartcase = true
 
 -------------------- COLOR SCHEMES AND HIGHLIGHTS --------------------
-vim.cmd[[ colorscheme dracula ]]
+vim.cmd[[ colorscheme gruvbox8_hard ]]
 vim.cmd[[ highlight Comment guifg=#00bbbb ]]
 vim.cmd[[ highlight LineNr guifg=#bbbbbb ]]
 vim.cmd[[ highlight NonText guifg=yellow ]]
@@ -47,4 +47,7 @@ vim.g.loaded_perl_provider = 0
 vim.g.python3_host_prog = '/usr/bin/python'
 
 -------------------- ABBREVIATIONS --------------------
-vim.cmd[[ abbreviate jbm JetBrainsMono Nerd Font]]
+vim.cmd[[iab jbm JetBrainsMono Nerd Font]]
+vim.cmd[[iab pb Phil Bevan]]
+vim.cmd[[iab pbe phil@philbev.co.uk]]
+vim.cmd[[iab pbg philbevan40@gmail.com]]
