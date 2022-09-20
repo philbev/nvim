@@ -36,13 +36,11 @@ set.guifont = 'JetBrainsMono Nerd Font'
 set.guifontwide = 'JetBrainsMono Nerd Font'
 
 -------------------- COLOR SCHEMES AND HIGHLIGHTS --------------------
-vim.cmd[[ colorscheme gruvbox8_hard ]]
 vim.cmd[[ highlight Comment guifg=#00bbbb ]]
 vim.cmd[[ highlight LineNr guifg=#bbbbbb ]]
 vim.cmd[[ highlight NonText guifg=yellow ]]
 vim.cmd[[ highlight WinSeparator guibg=None ]]
 vim.cmd[[ highlight PMenu guibg=#202020 ]]
-vim.cmd[[ highlight Normal guibg=None ]]
 
 -------------------- GLOBAL VARIABLES --------------------
 vim.g.loaded_perl_provider = 0
