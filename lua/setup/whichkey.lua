@@ -79,22 +79,19 @@ wk.setup{
 }
 
 wk.register({
-  c = { '<cmd>checkhealth<cr>', 'Run Checkhealth' },
-  q = { '<cmd>qa<cr>', '[:qa] Quit All' },
-  s = { '<cmd>w | so %<cr>', '[:w | so %] Write & Source All' },
-  f = {
-    name = "Telescope",
-    f = { "<cmd>Telescope find_files hidden=true prompt_prefix=🔎\\ <cr>", "Find File" },
-    g = { "<cmd>Telescope live_grep hidden=true prompt_prefix=🔎\\ <cr>", "Live Grep" },
-    h = { "<cmd>Telescope help_tags<cr>", "Help Tags" },
-    l = { "<cmd>Telescope highlights<cr>", "Highlights" },
-    o = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false },
-  },
-  v = {
-      name = 'Split',
-      h = {  '<cmd>split<cr>', 'Split Horizontal' },
-      v = {  '<cmd>vsplit<cr>', 'Split Vertical' },
-  },
-  w = { '<cmd>wa<cr>', '[:wa] Write All' },
-  x = { '<cmd>xa<cr>', '[:xa] Write & Exit All' },
+    c = { '<cmd>checkhealth<cr>', 'Run Checkhealth' },
+    f = {
+        name = "Telescope",
+        f = { "<cmd>Telescope find_files hidden=true prompt_prefix=🔎\\ <cr>", "Find File" },
+        g = { "<cmd>Telescope live_grep hidden=true prompt_prefix=🔎\\ <cr>", "Live Grep" },
+        h = { "<cmd>Telescope help_tags<cr>", "Help Tags" },
+        l = { "<cmd>Telescope highlights<cr>", "Highlights" },
+        o = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false },
+    },
+    h = {  '<cmd>split<cr>', 'Split Horizontal' },
+    q = { '<cmd>qa<cr>', '[:qa] Quit All' },
+    s = { '<cmd>w | so %<cr>', '[:w | so %] Write & Source All' },
+    v = {  '<cmd>vsplit<cr>', 'Split Vertical' },
+    w = { '<cmd>wa<cr>', '[:wa] Write All' },
+    x = { '<cmd>xa<cr>', '[:xa] Write & Exit All' },
 }, { prefix = "<leader>" })
