@@ -83,12 +83,11 @@ wk.register({
   q = { '<cmd>qa<cr>', '[:qa] Quit All' },
   s = { '<cmd>w | so %<cr>', '[:w | so %] Write & Source All' },
   f = {
-    name = "Telescope", -- optional group name
-    f = { "<cmd>Telescope find_files<cr>", "Find File" },
-    g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
+    name = "Telescope",
+    f = { "<cmd>Telescope find_files hidden=true prompt_prefix=🔎\\ <cr>", "Find File" },
+    g = { "<cmd>Telescope live_grep hidden=true prompt_prefix=🔎\\ <cr>", "Live Grep" },
     h = { "<cmd>Telescope help_tags<cr>", "Help Tags" },
     l = { "<cmd>Telescope highlights<cr>", "Highlights" },
-    --r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false, buffer = 123 }, -- additional options for creating the keymap
     o = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false },
   },
   v = {

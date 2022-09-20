@@ -32,6 +32,8 @@ set.winbar = '%f%=%b/0x%B'
 set.listchars = 'eol:⮰,space:.,trail:+,tab:➱ '
 set.ignorecase = true
 set.smartcase = true
+set.guifont = 'JetBrainsMono Nerd Font'
+set.guifontwide = 'JetBrainsMono Nerd Font'
 
 -------------------- COLOR SCHEMES AND HIGHLIGHTS --------------------
 vim.cmd[[ colorscheme gruvbox8_hard ]]
