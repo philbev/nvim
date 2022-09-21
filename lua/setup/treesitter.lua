@@ -12,6 +12,11 @@ if not status_ok then
     return
 end
 
+local stat_ok,rainbow = pcall(require, 'nvim-ts-rainbow')
+if not stat_ok then
+    return
+end
+
 ts.setup {
   -- A list of parser names, or "all"
   ensure_installed = { 'c', 'cpp', 'lua', 'python', 'fish', 'bash' },
