@@ -7,7 +7,12 @@
 
 -- ~/.config/nvim/lua/setup/treesitter.lua
 
-require'nvim-treesitter.configs'.setup {
+local status_ok,ts = pcall(require, 'nvim-treesitter.configs')
+if not status_ok then
+    return
+end
+
+ts.setup {
   -- A list of parser names, or "all"
   ensure_installed = { 'c', 'cpp', 'lua', 'python', 'fish', 'bash' },
   -- Install parsers synchronously (only applied to `ensure_installed`)
