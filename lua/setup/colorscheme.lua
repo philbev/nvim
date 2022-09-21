@@ -9,4 +9,10 @@ if not status_ok then
     return
 end
 
+-------------------- HIGHLIGHTS --------------------
+vim.cmd[[ highlight Comment guifg=#00bbbb ]]
+vim.cmd[[ highlight LineNr guifg=#bbbbbb ]]
+vim.cmd[[ highlight NonText guifg=yellow ]]
+vim.cmd[[ highlight WinSeparator guibg=None ]]
+vim.cmd[[ highlight PMenu guibg=#202020 ]]
 vim.cmd[[ highlight Normal guibg=None ]]

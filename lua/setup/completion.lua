@@ -90,7 +90,7 @@ cmp.setup.filetype('gitcommit', {
 		{ name = 'cmp_git' },
 	}, {
 		{ name = 'buffer' },
-		{ name = 'dictionary' },
+		{ name = 'dictionary', keyword_length = 5 },
 		{ name = 'path' },
 	})
 })
