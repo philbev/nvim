@@ -13,8 +13,8 @@ local opts = { noremap = true, silent = true }
 map('n', '', '<cmd>NeoTreeShowToggle<cr>', opts) -- Maps to Control-/
 map('n', '<M-/>', '<cmd>NeoTreeFloatToggle<cr>', opts) -- Maps to Control-/
 map('n', '<F2>', '<cmd>nohlsearch<cr>', opts)
-map('n', '<F3>', '<cmd>set spell! spell?<cr>', opts)
-map('n', '<F4>', '<cmd>set relativenumber! relativenumber?<cr>', opts)
+map('n', '<F3>', '<cmd>set spell!<cr>', opts)
+map('n', '<F4>', '<cmd>set relativenumber!<cr>', opts)
 map('n', '<M-,>', '<cmd>bprevious<cr>', opts)
 map('n', '<M-.>', '<cmd>bnext<cr>', opts)
 map('n', '<M-Del>', '<cmd>bdelete<cr>', opts)

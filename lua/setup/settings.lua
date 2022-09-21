@@ -35,13 +35,6 @@ set.smartcase = true
 set.guifont = 'JetBrainsMono Nerd Font'
 set.guifontwide = 'JetBrainsMono Nerd Font'
 
--------------------- COLOR SCHEMES AND HIGHLIGHTS --------------------
-vim.cmd[[ highlight Comment guifg=#00bbbb ]]
-vim.cmd[[ highlight LineNr guifg=#bbbbbb ]]
-vim.cmd[[ highlight NonText guifg=yellow ]]
-vim.cmd[[ highlight WinSeparator guibg=None ]]
-vim.cmd[[ highlight PMenu guibg=#202020 ]]
-
 -------------------- GLOBAL VARIABLES --------------------
 vim.g.loaded_perl_provider = 0
 vim.g.python3_host_prog = '/usr/bin/python'

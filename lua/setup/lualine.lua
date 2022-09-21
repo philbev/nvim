@@ -14,7 +14,7 @@ end
 
 local spell = function ()
     if vim.o.spell then
-        return 'SPELL'
+        return 'Spell'
     else
         return ''
     end
@@ -22,7 +22,7 @@ end
 
 local paste = function ()
     if vim.o.paste then
-        return 'paste'
+        return 'Paste'
     else
         return ''
     end
