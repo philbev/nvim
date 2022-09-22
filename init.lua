@@ -10,6 +10,7 @@
 require'setup.mappings'
 require'setup.settings'
 require'setup.packer'
+require'setup.treesitter'
 require'setup.completion'
 require'setup.colorizer'
 require'setup.autopairs'
