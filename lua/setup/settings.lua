@@ -28,7 +28,7 @@ set.completeopt = 'menu,menuone,noselect'
 set.splitright = true
 set.splitbelow = true
 set.laststatus = 3
-set.winbar = '%f%=%b/0x%B'
+set.winbar = '%f%m%=Ascii %b/Hex %B'
 set.listchars = 'eol:⮰,space:.,trail:+,tab:➱ '
 set.ignorecase = true
 set.smartcase = true
