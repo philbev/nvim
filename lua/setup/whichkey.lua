@@ -89,6 +89,7 @@ wk.register({
         o = { "<cmd>Telescope oldfiles prompt_prefix=🔎\\ <cr>", "Open Recent File", noremap=false },
     },
     h = {  '<cmd>split<cr>', 'Split Horizontal' },
+    n = {  '<cmd>Notifications<cr>', 'Notifications' },
     q = { '<cmd>qa<cr>', '[:qa] Quit All' },
     s = { '<cmd>w | so %<cr>', '[:w | so %] Write & Source All' },
     v = {  '<cmd>vsplit<cr>', 'Split Vertical' },
