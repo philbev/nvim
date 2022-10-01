@@ -24,6 +24,8 @@ local map_c_w = false -- map <c-w> to delete a pair if possible
 
 local status_ok,autopairs = pcall(require, 'nvim-autopairs')
 if not status_ok then
+    vim.notify = require('notify')
+    vim.notify('Autopairs plugin load error!', 'error')
     return
 end
 

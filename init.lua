@@ -7,9 +7,11 @@
 
 -- ~/.config/nvim/lua/setup/../../init.lua
 
-require'setup.mappings'
 require'setup.settings'
+require'setup.notify'
+require'setup.colors'
 require'setup.packer'
+require'setup.mappings'
 require'setup.treesitter'
 require'setup.completion'
 require'setup.colorizer'
@@ -22,7 +24,5 @@ require'setup.onedark'
 require'setup.whichkey'
 require'setup.surround'
 require'setup.toggleterm'
-require'setup.notify'
 require'setup.markdown'
-require'setup.colors'
 require'setup.luasnip'

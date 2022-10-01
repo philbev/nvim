@@ -9,6 +9,8 @@
 
 local status_ok,ts = pcall(require, 'nvim-treesitter.configs')
 if not status_ok then
+    vim.notify = require('notify')
+    vim.notify('Treesitter Error!', 'error')
     return
 end
 
