@@ -17,6 +17,10 @@ local f = ls.function_node
 local c = ls.choice_node
 local d = ls.dynamic_node
 local r = ls.restore_node
+local extras = require("luasnip.extras")
+local m = extras.m
+local l = extras.l
+local rep = extras.rep
 local events = require("luasnip.util.events")
 local ai = require("luasnip.nodes.absolute_indexer")
 local fmt = require("luasnip.extras.fmt").fmt
@@ -66,12 +70,29 @@ vim.cmd([[smap <silent> <C-n> <Plug>luasnip-next-choice]])
 vim.cmd([[imap <silent> <C-p> <Plug>luasnip-prev-choice]])
 vim.cmd([[smap <silent> <C-p> <Plug>luasnip-prev-choice]])
 
+--------------------------------------------------------
+--                   'LUA' SNIPPETS                   --
+--------------------------------------------------------
 ls.add_snippets('lua', {
-    s('#!', fmt([[#! /usr/bin/env lua
+    s({trig='#!', dscr='Hash bang'}, fmt([[#! /usr/bin/env lua
 
- {}]], {i(1)}))
+ {}]], {i(1)})),
+
+--------------------------------------------------------------------------------
+    s({trig='pcall', dscr='Protected call'}, fmt([[local {},{} = pcall({}, '{}')
+    if not {} then
+   return
+   end {}]],
+        {i(1, 'status_ok'), i(2, 'NAME'), i(3, 'require'), i(4, 'FUNCTION NAME'), rep(1), i(0)})),
+--------------------------------------------------------------------------------
+
+s({trig='map', dscr = 'Vim.keymap.set'}, fmt([[map('{}', '{}', '{}', opts)]],
+    {i(1,'n'), i(2, 'LHS'), i(3, 'RHS')}))
 })
 
+--------------------------------------------------------
+--                   'ALL' SNIPPETS                   --
+--------------------------------------------------------
 ls.add_snippets("all", {
     s({trig="ternary", dscr="Ternary Operator"}, {
         -- equivalent to "${1:cond} ? ${2:then} : ${3:else}"
