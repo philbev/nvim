@@ -79,3 +79,8 @@ au({'FileType'}, {
     pattern = {'python'},
     command = "lua vim.keymap.set('n', '<F5>', '<cmd>w | terminal python %<cr>a', { noremap = true, silent = true, buffer = 0 })"
 })
+
+au({ 'FileType' }, {
+    pattern = { 'gitcommit' },
+    command = "lua vim.wo.spell = true"
+})
