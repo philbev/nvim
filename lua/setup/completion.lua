@@ -21,7 +21,12 @@ if not stats_ok then
     return
 end
 
---local lspkind = lspkind
+local snips_ok, friendly = pcall(require, 'luasnip.loaders.from_vscode')
+if not snips_ok then
+    return
+end
+
+friendly.lazy_load()
 
 local is_ok,cmp = pcall(require, 'cmp')
 if not is_ok then
