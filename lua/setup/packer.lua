@@ -67,6 +67,8 @@ return packer.startup(function()
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 	use 'rcarriga/nvim-notify'
 	use 'rafamadriz/friendly-snippets'
+	use 'williamboman/mason.nvim'
+	use 'williamboman/mason-lspconfig.nvim'
 	if packer_bootstrap then
 		require('packer').sync()
 	end
