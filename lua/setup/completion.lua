@@ -33,6 +33,34 @@ if not is_ok then
     return
 end
 
+local kind_icons = {
+  Text = '  ',
+  Method = '  ',
+  Function = '  ',
+  Constructor = '  ',
+  Field = '  ',
+  Variable = '  ',
+  Class = '  ',
+  Interface = '  ',
+  Module = '  ',
+  Property = '  ',
+  Unit = '  ',
+  Value = '  ',
+  Enum = '  ',
+  Keyword = '  ',
+  Snippet = '  ',
+  Color = '  ',
+  File = '  ',
+  Reference = '  ',
+  Folder = '  ',
+  EnumMember = '  ',
+  Constant = '  ',
+  Struct = '  ',
+  Event = '  ',
+  Operator = '  ',
+  TypeParameter = '  ',
+}
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -61,40 +89,42 @@ cmp.setup({
       end
     end, { "i", "s" }),
 
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { "i", "s" }),
-	}),
-	sources = cmp.config.sources({
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
+    }),
+    sources = cmp.config.sources({
         { name = 'luasnip' },
-		{ name = 'nvim_lsp' },
-		{ name = 'nvim_lua' },
-		{ name = 'path' },
-	}, {
-		{ name = 'buffer' },
-		{ name = 'dictionary', keyword_length = 4 },
-	}),
-	formatting = {
-		format = lspkind.cmp_format {
-			mode = 'symbol_text',
-			maxwidth = 50,
-			with_text = true,
-			menu = {
-				buffer = "[Buf]",
-				nvim_lsp = "[Lsp]",
-				nvim_lua = "[Api]",
-				path = "[Path]",
-				luasnip = "[Luasnip]",
-				dictionary = '[Dict]'
-			},
-		},
-	}
+        { name = 'nvim_lsp' },
+        { name = 'nvim_lua' },
+        { name = 'path' },
+        }, {
+            { name = 'buffer' },
+            { name = 'dictionary', keyword_length = 4 },
+    }),
+    formatting = {
+        format = function(entry, vim_item)
+            -- Kind icons
+            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+            -- Source
+            vim_item.menu = ({
+                buffer = "[Buffer]",
+                nvim_lsp = "[Lsp]",
+                luasnip = "[LuaSnip]",
+                nvim_lua = "[Api]",
+                dictionary = '[Dict]',
+                path = '[Path]',
+                latex_symbols = "[LaTeX]",
+            })[entry.source.name]
+            return vim_item
+        end
+    },
 })
 
 -- Set configuration for specific filetype.
