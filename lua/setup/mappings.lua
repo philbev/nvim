@@ -31,13 +31,19 @@ map('n', '<leader>q', '<cmd>qa<cr>', opts)
 map('n', '<leader>s', '<cmd>w | so %<cr>', opts)
 map('n', '<leader>w', '<cmd>wa<cr>', opts)
 map('n', '<leader>x', '<cmd>xa<cr>', opts)
+map('n', '<Up>', '<Nop>', opts)
+map('n', '<Down>', '<Nop>', opts)
+map('n', '<Left>', '<Nop>', opts)
+map('n', '<Right>', '<Nop>', opts)
+
+
+-------------------- INSERT MODE MAPPINGS --------------------
+map('i', '<Up>', '<Nop>', opts)
+map('i', '<Down>', '<Nop>', opts)
+map('i', '<Left>', '<Nop>', opts)
+map('i', '<Right>', '<Nop>', opts)
 
 
 -------------------- VISUAL MODE MAPPINGS --------------------
 map('v', '<M-Down>', ":m '>+1<cr>gv", opts)
 map('v', '<M-Up>', ":m '<-2<cr>gv", opts)
-
-
-
-
-
