@@ -28,3 +28,7 @@ require('lspconfig')['jedi_language_server'].setup{
 require('lspconfig')['bashls'].setup{
     capabilities = capabilities
 }
+
+require('lspconfig')['ltex'].setup{
+    capabilities = capabilities
+}
