@@ -41,9 +41,9 @@ au({ 'FileType' }, {
     command = "lua vim.keymap.set('n', 'b', '<C-b>', { noremap = true, silent = true, buffer = 0 })"
 })
 
--- Hit <Esc> key to quit packer.
+-- Hit <Esc> key to quit packer, help and checkhealth.
 au({ 'FileType' }, {
-    pattern = { 'packer' },
+    pattern = { 'packer', 'help', 'checkhealth' },
     command = "lua vim.keymap.set('n', '<Esc>', '<cmd>q<cr>', { noremap = true, silent = true, buffer = 0 })"
 })
 
