@@ -35,6 +35,8 @@ map('n', '<Up>', '<Nop>', opts)
 map('n', '<Down>', '<Nop>', opts)
 map('n', '<Left>', '<Nop>', opts)
 map('n', '<Right>', '<Nop>', opts)
+map('n', 'n', 'nzz', opts)
+map('n', 'N', 'Nzz', opts)
 
 
 -------------------- INSERT MODE MAPPINGS --------------------
