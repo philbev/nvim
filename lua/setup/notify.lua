@@ -6,7 +6,7 @@ end
 --vim.notify = require'notify'
 
 notify.setup({
-    background_colour = '#404040'
+    background_colour = '#00ffff'
 })
 
 vim.notify = notify
