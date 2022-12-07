@@ -69,6 +69,7 @@ return packer.startup(function()
 	use 'rafamadriz/friendly-snippets'
 	use 'williamboman/mason.nvim'
 	use 'williamboman/mason-lspconfig.nvim'
+	use 'lewis6991/gitsigns.nvim'
 	if packer_bootstrap then
 		require('packer').sync()
 	end
