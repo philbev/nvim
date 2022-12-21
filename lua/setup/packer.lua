@@ -70,6 +70,8 @@ return packer.startup(function()
 	use 'williamboman/mason.nvim'
 	use 'williamboman/mason-lspconfig.nvim'
 	use 'lewis6991/gitsigns.nvim'
+	use 'tpope/vim-characterize'
+	use 'ethanholz/nvim-lastplace'
 	if packer_bootstrap then
 		require('packer').sync()
 	end
