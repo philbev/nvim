@@ -16,11 +16,6 @@ if not status_ok then
     return
 end
 
-local stats_ok,lspkind = pcall(require, 'lspkind')
-if not stats_ok then
-    return
-end
-
 local snips_ok, friendly = pcall(require, 'luasnip.loaders.from_vscode')
 if not snips_ok then
     return
