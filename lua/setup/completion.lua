@@ -103,11 +103,10 @@ cmp.setup({
         { name = 'luasnip' },
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
+        { name = 'buffer' },
         { name = 'path' },
-        }, {
-            { name = 'buffer' },
-            { name = 'dictionary', keyword_length = 4 },
-    }),
+        { name = 'dictionary', keyword_length = 4 },
+        }),
     formatting = {
         format = function(entry, vim_item)
             -- Kind icons
