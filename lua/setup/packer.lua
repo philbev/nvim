@@ -59,6 +59,7 @@ return packer.startup(function()
 	use 'Mofiqul/dracula.nvim'
 	use 'lifepillar/vim-gruvbox8'
 	use 'navarasu/onedark.nvim'
+	use 'RRethy/nvim-base16'
 	use { 'nvim-neo-tree/neo-tree.nvim', branch = 'v2.x' }
 	use 'MunifTanjim/nui.nvim'
 	use 'folke/which-key.nvim'
@@ -72,6 +73,8 @@ return packer.startup(function()
 	use 'lewis6991/gitsigns.nvim'
 	use 'tpope/vim-characterize'
 	use 'ethanholz/nvim-lastplace'
+	use 'folke/neodev.nvim'
+    use({ "mtoohey31/cmp-fish", ft = "fish" })
 	if packer_bootstrap then
 		require('packer').sync()
 	end
