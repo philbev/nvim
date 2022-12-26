@@ -19,5 +19,5 @@ end
 
 mason.setup()
 lspconfig.setup({
-    ensure_installed = { 'jedi_language_server', 'pylsp' }
+    ensure_installed = { 'jedi_language_server', 'pylsp', 'sumneko_lua' }
 })

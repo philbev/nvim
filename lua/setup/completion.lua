@@ -98,6 +98,7 @@ cmp.setup({
         { name = 'luasnip' },
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
+        { name = 'fish' },
         { name = 'buffer' },
         { name = 'path' },
         { name = 'dictionary', keyword_length = 4 },
