@@ -1,4 +1,4 @@
--- Install packer
+-- Install packer {{{1
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 local is_bootstrap = false
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -8,10 +8,10 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 require('packer').startup(function(use)
-  -- Package manager
+  -- Package manager{{{1
   use 'wbthomason/packer.nvim'
 
-  use { -- LSP Configuration & Plugins
+  use { -- LSP Configuration & Plugins{{{2
     'neovim/nvim-lspconfig',
     requires = {
       -- Automatically install LSPs to stdpath for neovim
@@ -26,24 +26,24 @@ require('packer').startup(function(use)
     },
   }
 
-  use { -- Autocompletion
+  use { -- Autocompletion{{{2
     'hrsh7th/nvim-cmp',
     requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   }
 
-  use { -- Highlight, edit, and navigate code
+  use { -- Highlight, edit, and navigate code{{{2
     'nvim-treesitter/nvim-treesitter',
     run = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   }
 
-  use { -- Additional text objects via treesitter
+  use { -- Additional text objects via treesitter{{{2
     'nvim-treesitter/nvim-treesitter-textobjects',
     after = 'nvim-treesitter',
   }
 
-  -- Git related plugins
+  -- Git related plugins{{{2
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
@@ -92,7 +92,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = vim.fn.expand '$MYVIMRC',
 })
 
--- [[ Setting options ]]
+-- [[ Setting options ]]{{{1
 -- See `:help vim.o`
 
 -- Set highlight on search
@@ -125,7 +125,7 @@ vim.cmd [[colorscheme onedark]]
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- [[ Basic Keymaps ]]
+-- [[ Basic Keymaps ]]{{{1
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -140,7 +140,7 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- [[ Highlight on yank ]]
+-- [[ Highlight on yank ]]{{{1
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -151,7 +151,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
--- Set lualine as statusline
+-- Plugin configurations{{{1
+-- Set lualine as statusline{{{2
 -- See `:help lualine.txt`
 require('lualine').setup {
   options = {
@@ -162,17 +163,17 @@ require('lualine').setup {
   },
 }
 
--- Enable Comment.nvim
+-- Enable Comment.nvim{{{2
 require('Comment').setup()
 
--- Enable `lukas-reineke/indent-blankline.nvim`
+-- Enable `lukas-reineke/indent-blankline.nvim`{{{2
 -- See `:help indent_blankline.txt`
 require('indent_blankline').setup {
   char = '┊',
   show_trailing_blankline_indent = false,
 }
 
--- Gitsigns
+-- Gitsigns{{{2
 -- See `:help gitsigns.txt`
 require('gitsigns').setup {
   signs = {
@@ -184,7 +185,7 @@ require('gitsigns').setup {
   },
 }
 
--- [[ Configure Telescope ]]
+-- [[ Configure Telescope ]]{{{2
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
   defaults = {
@@ -197,6 +198,7 @@ require('telescope').setup {
   },
 }
 
+-- Telescope configuration.{{{2
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
@@ -217,7 +219,7 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
--- [[ Configure Treesitter ]]
+-- [[ Configure Treesitter ]]{{{2
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
@@ -280,13 +282,13 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
--- Diagnostic keymaps
+-- Diagnostic keymaps{{{1
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
--- LSP settings.
+-- LSP settings.{{{1
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
   -- NOTE: Remember that lua is a real programming language, and as such it is possible
@@ -381,7 +383,7 @@ mason_lspconfig.setup_handlers {
 -- Turn on lsp status information
 require('fidget').setup()
 
--- nvim-cmp setup
+-- nvim-cmp setup{{{1
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 
@@ -425,5 +427,5 @@ cmp.setup {
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+-- vim: ts=2 sts=2 sw=2 et fen fdm=marker
 
