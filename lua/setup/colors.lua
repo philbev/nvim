@@ -1,7 +1,8 @@
 -- ~/.config/nvim/lua/setup/colorscheme.lua
 
 --local colorscheme = 'gruvbox8_hard'
-local colorscheme = 'base16-gruvbox-dark-hard'
+--local colorscheme = 'base16-gruvbox-dark-hard'
+local colorscheme = 'onedark'
 vim.cmd[[ highlight Normal guibg=#404040 ]]
 
 local status_ok,_ = pcall(vim.cmd, 'colorscheme ' .. colorscheme)
