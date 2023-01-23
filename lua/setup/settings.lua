@@ -34,6 +34,7 @@ set.ignorecase = true
 set.smartcase = true
 set.guifont = 'JetBrainsMono Nerd Font'
 set.guifontwide = 'JetBrainsMono Nerd Font'
+set.foldcolumn = 'auto:5'
 
 -------------------- GLOBAL VARIABLES --------------------
 vim.g.loaded_perl_provider = 0

@@ -74,12 +74,10 @@ return packer.startup(function()
 	use 'tpope/vim-characterize'
 	use 'ethanholz/nvim-lastplace'
 	use 'folke/neodev.nvim'
+    use 'j-hui/fidget.nvim'
     use({ "mtoohey31/cmp-fish", ft = "fish" })
 	if packer_bootstrap then
 		require('packer').sync()
 	end
 end)
 
-
--- use 'lewis6991/gitsigns.nvim'
--- use 'kyazdani42/nvim-tree.lua'
