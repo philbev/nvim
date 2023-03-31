@@ -12,7 +12,8 @@ if not status_ok then
 end
 
 -------------------- HIGHLIGHTS --------------------
-vim.cmd[[ highlight @comment guifg=#999999 ]]
+vim.cmd[[ highlight @comment guifg=#bbbbbb ]]
+vim.cmd[[ highlight Comment guifg=#888888 ]]
 vim.cmd[[ highlight LineNr guifg=#bbbbbb ]]
 vim.cmd[[ highlight NonText guifg=yellow ]]
 vim.cmd[[ highlight WinSeparator guibg=None ]]
