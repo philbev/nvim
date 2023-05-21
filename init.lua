@@ -8,7 +8,7 @@
 -- ~/.config/nvim/lua/setup/../../init.lua
 
 require'setup.settings'
-require'setup.notify'
+--require'setup.notify'
 require'setup.colors'
 require'setup.packer'
 require'setup.mappings'
@@ -31,3 +31,8 @@ require'setup.lspconfig'
 require'setup.gitsigns'
 require'setup.lastplace'
 require'setup.fidget'
+
+-- If the current buffer is a 'No Name' buffer, display the startup page
+if vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf()) == '' then
+    vim.cmd('intro')
+end
