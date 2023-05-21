@@ -75,6 +75,8 @@ return packer.startup(function()
 	use 'ethanholz/nvim-lastplace'
 	use 'folke/neodev.nvim'
     use 'j-hui/fidget.nvim'
+    use 'luisiacc/gruvbox-baby'
+    use 'sainnhe/gruvbox-material'
     use({ "mtoohey31/cmp-fish", ft = "fish" })
 	if packer_bootstrap then
 		require('packer').sync()
