@@ -2,7 +2,7 @@
 
 --local colorscheme = 'gruvbox8_hard'
 --local colorscheme = 'base16-gruvbox-dark-hard'
-local colorscheme = 'onedark'
+local colorscheme = 'gruvbox-baby'
 
 local status_ok,_ = pcall(vim.cmd, 'colorscheme ' .. colorscheme)
 
