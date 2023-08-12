@@ -82,6 +82,7 @@ wk.register({
     c = { '<cmd>checkhealth<cr>', 'Run Checkhealth' },
     f = {
         name = "Telescope",
+        b = { "<cmd>Telescope buffers prompt_prefix=🔎\\ <cr>", "Buffers" },
         d = { "<cmd>Telescope diagnostics prompt_prefix=🔎\\ <cr>", "Diagnostics" },
         f = { "<cmd>Telescope find_files hidden=true prompt_prefix=🔎\\ <cr>", "Find File" },
         g = { "<cmd>Telescope live_grep hidden=true prompt_prefix=🔎\\ <cr>", "Live Grep" },
